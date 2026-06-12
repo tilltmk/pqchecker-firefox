@@ -12,6 +12,7 @@ const PQ_SIG_PATTERNS = [
 ];
 
 const tabStates = new Map();
+const _ = browser.i18n.getMessage;
 
 function matchesPq(value, patterns) {
   if (!value) return false;
@@ -24,10 +25,10 @@ function applyIcon(tabId) {
   const state = info ? info.state : "unknown";
 
   const config = {
-    pq: { icon: "pq", badge: "PQ", color: "#16a34a", title: "Post-Quantum gesichert" },
-    classical: { icon: "classical", badge: "!", color: "#d97706", title: "Klassisch (kein PQ)" },
-    insecure: { icon: "insecure", badge: "X", color: "#dc2626", title: "Kein HTTPS" },
-    unknown: { icon: "unknown", badge: "?", color: "#6b7280", title: "Unbekannt" },
+    pq: { icon: "pq", badge: "PQ", color: "#16a34a", title: _("titlePq") },
+    classical: { icon: "classical", badge: "!", color: "#d97706", title: _("titleClassical") },
+    insecure: { icon: "insecure", badge: "X", color: "#dc2626", title: _("titleInsecure") },
+    unknown: { icon: "unknown", badge: "?", color: "#6b7280", title: _("titleUnknown") },
   };
   const c = config[state] || config.unknown;
 
