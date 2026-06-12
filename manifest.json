@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Post-Quantum Certificate Checker",
+  "version": "1.2.0",
+  "description": "Zeigt an, ob die aktuelle Webseite Post-Quantum-sichere Kryptografie verwendet.",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/unknown-48.png",
+      "32": "icons/unknown-48.png",
+      "48": "icons/unknown-48.png"
+    },
+    "default_title": "PQ Certificate Checker"
+  },
+  "icons": {
+    "48": "icons/pq-48.png",
+    "96": "icons/pq-96.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pq-cert-checker@core",
+      "strict_min_version": "62.0"
+    }
+  }
+}
