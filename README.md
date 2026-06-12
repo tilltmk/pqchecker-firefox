@@ -18,6 +18,8 @@ A Firefox/Zen Browser extension that shows whether a website uses post-quantum s
 ## Screenshot
 
 ![Post-Quantum Checker Popup](https://raw.githubusercontent.com/tilltmk/pqchecker-firefox/main/icons/pq-96.png)
+<img width="366" height="636" alt="grafik" src="https://github.com/user-attachments/assets/ba7f530a-e607-4554-9aa7-0ac2c1199c78" />
+
 
 ## Installation
 
